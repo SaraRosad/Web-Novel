@@ -21,10 +21,10 @@
     @include('components.welcome.section-gallery')
 
     <!-- ======= Supporters Section ======= -->
-    @include('components.welcome.section-supporters')
-
+   {{--  @include('components.welcome.section-supporters')
+ --}}
     <!-- =======  F.A.Q Section ======= -->
-    @include('components.welcome.section-faq')
+{{--     @include('components.welcome.section-faq') --}}
 
    {{--  <!-- ======= Subscribe Section ======= -->
     @include('components.welcome.section-subscribe')
@@ -33,5 +33,5 @@
     @include('components.welcome.section-buyTicket')
  --}}
     <!-- ======= Contact Section ======= -->
-    @include('components.welcome.section-contact')
+{{--     @include('components.welcome.section-contact') --}}
 @endsection

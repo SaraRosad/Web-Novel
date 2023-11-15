@@ -12,7 +12,6 @@ body {
   background: #fff;
   color: #2f3138;
   font-family: "Open Sans", sans-serif;
-  cursor: url('../images/icons8-mouse-face-48.png');
 }
 
 a {
@@ -164,6 +163,7 @@ h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+  background: rgba(6, 12, 34, 0.98);
 }
 
 #header.header-scrolled,
@@ -495,21 +495,31 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
-  height: 100vh;
-  background: url(../images/Gaming_Background.jpg) top center;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
+    width: 100%;
+   /*  height: 74vh; */
+    /*  background: url(../images/Gaming_Background.jpg) top center;
+    background-size: cover; */
+    overflow: hidden;
+    position: relative;
+    z-index: -100;
+    /*New update in slider ->*/
+    box-sizing: border-box;
+    padding: 15% 7% 7% 7%;
 }
 
+#hero .hero-img {
+    overflow: hidden;
+    background-size: cover;
+}
 @media (min-width: 1024px) {
   #hero {
+    padding: 7% 7% 7% 7%;
     background-attachment: fixed;
   }
 }
 
-#hero:before {
+
+/* #hero:before {
   content: "";
   background: rgba(6, 12, 34, 0.8);
   position: absolute;
@@ -517,7 +527,7 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-}
+} */
 
 #hero .hero-container {
   position: absolute;
@@ -552,8 +562,28 @@ h6 {
 }
 
 @media (max-width: 991px) {
+    #hero{
+        padding: 20% 7% 7% 7%;
+    }
+
   #hero h1 {
     font-size: 34px;
+  }
+  #hero h4 {
+    font-size: 16px;
+  }
+  #hero span{
+    font-size: 10px;
+  }
+
+  #hero .cover-slider{
+    width: 180px;
+    height: 240px;
+  }
+
+  #hero .container-slider .chapters .chapter-highlight{
+    padding: 1px 1px 1px 5px;
+    margin: 2px 0 2px 0;
   }
 }
 
@@ -661,6 +691,180 @@ h6 {
   background: #f82249;
   color: #fff;
 }
+
+.slider{
+    width: 300px;
+    text-align:center;
+    overflow: hidden;
+}
+
+.slider-container{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slider-container::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+.slider-container::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 10px;
+}
+
+.slider-container::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+.slider-container > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    height: 400px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position:relative;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.slider > a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius:50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+    top: 50%;
+    color: #101522;
+    cursor: pointer;
+}
+
+.slider > a:active {
+    background: linear-gradient(to bottom, #74ABE2, #5563DE);
+    top: 1px;
+    color: white;
+}
+
+.slider > a:focus{
+    background: #112363;
+    color: white;
+}
+.slider > a:hover{
+    cursor: pointer;
+}
+
+@supports(scroll-snap-type: x mandatory) {
+    .slider-container > a {
+        display: none;
+    }
+}
+
+
+.splide__track{
+    height: -webkit-fill-available !important;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+  .slider-novels{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cover-slider{
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 280px;
+    height: 370px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    object-fit: cover;
+    background-size: cover;
+    overflow: hidden;
+
+  }
+
+  .cover-slider img{
+    background-size: cover;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    width: fit-content;
+    max-height: max-content;
+    max-width: max-content;
+  }
+
+  .container-slider{
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .container-slider .title{
+    margin: 10px 0 0 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+  }
+  .container-slider span{
+    margin: 1px 0 0 0;
+    text-align: left;
+    top: 0;
+    font-size: small;
+    font-weight: 400;
+    font-family: "fontawesome";
+  }
+
+  .container-slider .chapters{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-slider .chapters .chapter-highlight {
+    background: rgba(237, 238, 245, 0.25);
+    border: 1px solid rgba(39, 47, 104, 0.25);
+    border-radius: 30px;
+    padding: 5px 5px 5px 15px;
+    margin: 5px 0 5px 0;
+    text-align: left;
+    color: #040919;
+    font-size: smaller;
+  }
 
 @-webkit-keyframes pulsate-btn {
   0% {
@@ -1548,7 +1752,7 @@ h6 {
 
 #footer .footer-top {
   background: #040919;
-  padding: 60px 0 30px 0;
+  padding: 30px 0 30px 0;
 }
 
 #footer .footer-top .footer-info {

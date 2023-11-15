@@ -4,46 +4,7 @@
       <div class="container">
         <div class="row">
 
-          {{-- <div class="col-lg-3 col-md-6 footer-info">
-            <img src="assets/img/logo.png" alt="TheEvenet">
-            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
- --}}
-          {{-- <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div> --}}
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-           <h4>Contact</h4>
-          </div>
-            <p class="col-12 d-flex">
-                AV.Hispanoamericana,Proyecto Livera
-                Santigo de los caballeros, 51000
-                Republica Dominicana
-            </p>
-            <p class="col-12">
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-            </p>
-          <div class="social-links d-flex">
+          <div class="social-links d-flex justify-content-center">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -56,7 +17,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+        &copy; Copyright <strong>{{ config('app.name', 'Saiki Web Novels') }}</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--
@@ -65,7 +26,7 @@
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
       -->
-        Designed by Sara
+        Designed by Saiki01
       </div>
     </div>
   </footer><!-- End  Footer -->

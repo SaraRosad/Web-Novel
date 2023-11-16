@@ -17,9 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pokemon', function(){
-    return view('show_pokemon');
-})->name('pokemon.show');
+Route::get('/novel', [App\Http\Controllers\ShowController::class, 'index'])->name('novel.show');
 
 Route::get('/map', function(){
     return view('mapbox');

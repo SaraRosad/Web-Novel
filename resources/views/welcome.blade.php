@@ -2,11 +2,14 @@
 
 
 @section('content')
+
+    <!-- ======= Hero Section ======= -->
+    @include('components.welcome.section-hero')
     <!-- ======= About Section ======= -->
     @include('components.welcome.section-about')
 
     <!-- ======= Speakers Section ======= -->
-    @include('components.welcome.section-pokemons')
+    @include('components.welcome.section-novels')
 
    {{--  <!-- ======= Schedule Section ======= -->
     @include('components.welcome.section-schedule')
@@ -18,8 +21,8 @@
     {{-- @include('components.welcome.section-hotels') --}}
 
     <!-- ======= Gallery Section ======= -->
-    @include('components.welcome.section-gallery')
-
+    {{-- @include('components.welcome.section-gallery') --- see later
+ --}}
     <!-- ======= Supporters Section ======= -->
    {{--  @include('components.welcome.section-supporters')
  --}}

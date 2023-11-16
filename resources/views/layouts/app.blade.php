@@ -20,6 +20,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+
+
   <link href="{{asset('assets/vendor/splide-4.1.3/css/splide.min.css')}}" rel="stylesheet">
   <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
   <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -31,6 +33,9 @@
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet">
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+
+  <!-- Background Images CSS FILE-->
+  <link href="{{asset('assets/css/confetti.css')}}" rel="stylesheet">
 </head>
 <body>
     <!-- ======= Header ======= -->
@@ -40,7 +45,7 @@
             <div id="logo" class="me-auto">
                 <!-- Uncomment below if you prefer to use a text logo -->
                 <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
-                <a href="index.html" class="scrollto"><i class="fa fa-trophy" aria-hidden="true"></i> {{ config('app.name', 'Saiki Web Novels') }}</a>
+                <a href="index.html" class="scrollto">{{ config('app.name', 'Saiki Web Novels') }}</a>
             </div>
 
             <nav id="navbar" class="navbar order-last order-lg-0">
@@ -113,92 +118,6 @@
         </div>
     </header><!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
-    <div id="hero">
-        <div class="section-header">
-            <h2>Popular Novels Updates</h2>
-        </div>
-
-        <div  id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    {{-- SLIDER CONTENT NOVEL --}}
-                    <div class="slider-novels">
-                        <div class="cover-slider">
-                            <img src="{{ asset('assets/images/portrait_manhwa.jpg') }}" alt="...">
-                        </div>
-                        <div class="container-slider">
-                            <h4 class="title">
-                                HOW TO PROTECT MY SUB MALE LEAD DAD
-                                <span>Tuesday, November 14 2023</span>
-                            </h4>
-
-                            <br>
-                            <div class="chapters">
-                                <a class="chapter-highlight">
-                                    <strong>Chapter 4</strong>
-                                </a>
-                                <a class="chapter-highlight">
-                                    <strong>Chapter 3</strong>
-                                </a>
-                                <a class="chapter-highlight">
-                                    <strong>Chapter 2</strong>
-                                </a>
-                                <a class="chapter-highlight">
-                                    <strong>Chapter 1</strong>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    {{-- */SLIDER CONTENT NOVEL --}}
-                </div>
-                <div class="carousel-item">
-                     {{-- SLIDER CONTENT NOVEL --}}
-                     <div class="slider-novels">
-                        <div class="cover-slider">
-                            <img src="{{ asset('assets/images/manhwa_squirrel.png') }}" alt="...">
-                        </div>
-                        <div class="container-slider">
-                            <h4 class="title">
-                                TALENTED BABY SQUIRREL
-                                <span>Monday, August 4 2023</span>
-                            </h4>
-
-                            <br>
-                            <div class="chapters">
-                                <a class="chapter-highlight">
-                                    <strong>Chapter 15</strong>
-                                </a>
-                                <a class="chapter-highlight">
-                                    <strong>Chapter 14</strong>
-                                </a>
-                                <a class="chapter-highlight">
-                                    <strong>Chapter 13</strong>
-                                </a>
-                                <a class="chapter-highlight">
-                                    <strong>Chapter 12</strong>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    {{-- */SLIDER CONTENT NOVEL --}}
-                </div>
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            {{-- /CAROUSEL --}}
-        </div>
-        {{-- /HERO  --}}
-    </div>
 
     <main id="main">
         @yield('content')
@@ -224,6 +143,7 @@
     <script src="{{asset('assets/js/main.js')}}"></script>
 
     <script src="{{asset('assets/js/data.js')}}"></script>
+    <script src="{{asset('assets/js/novels/data.js')}}"></script>
 
    {{--  <script>
         document.addEventListener( 'DOMContentLoaded', function () {
